@@ -1,0 +1,36 @@
+﻿@page
+@model Taim_Website.Pages.ContactUsModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<h2>Contact Us</h2>
+<p>If you’d like to get in touch, fill out the form below or visit us in person.</p>
+
+<form class="mt-3 was-validated" asp-page="/Thanks">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Your Name" required />
+        <div class="invalid-feedback">Enter your name.</div>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="your@email.com" required />
+        <div class="invalid-feedback">Enter a valid email.</div>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" rows="4" required></textarea>
+        <div class="invalid-feedback">Write a short message.</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+
+
+<br />
+<div class="map-responsive">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1924.225029904344!2d-7.323911797700276!3d55.002869367715334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485fe180335aa009%3A0x9891404a7b74ac64!2sNorth%20West%20Regional%20College!5e0!3m2!1sen!2suk!4v1763465913177!5m2!1sen!2suk" width="600" height="450" style="border:0;" loading="lazy"></iframe>
+</div>

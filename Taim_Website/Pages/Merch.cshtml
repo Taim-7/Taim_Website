@@ -1,0 +1,179 @@
+﻿@page
+@model Taim_Website.Pages.MerchModel
+@{
+    ViewData["Title"] = "Merchandise Page";
+}
+
+<h2>Club Merchandise</h2>
+<p>Browse our exclusive club collectables and memorabilia.</p>
+
+<div class="row">
+
+    <div id="filter-buttons" class="mb-3">
+        <button class="btn btn-primary btn-sm mt-2" data-filter="all">Show All</button>
+        <button class="btn btn-outline-primary btn-sm mt-2" data-filter="badges">Badges</button>
+        <button class="btn btn-outline-primary btn-sm mt-2" data-filter="mats">Mats</button>
+        <button class="btn btn-outline-primary btn-sm mt-2" data-filter="wheelTrims">Wheel Trims</button>
+        <button class="btn btn-outline-primary btn-sm mt-2" data-filter="clothes">Clothes</button>
+        <button class="btn btn-outline-primary btn-sm mt-2" data-filter="gloves">Gloves</button>
+    </div>
+
+    <div class="col-lg-3 mb-4 g-3" data-category="badges">
+        <div class="cardr">
+            <div class="media">
+                <img src="/img/badge.png" alt="Badge">
+            </div>
+            <div class="content">
+                <h5>Club Badge</h5>
+                <p>High-quality metal badge featuring the WKK logo.</p>
+                <span class="badge">for £2.99</span>
+                <button type="button" class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 mb-4 g-3" data-category="gloves">
+        <div class="cardr">
+            <div class="media">
+                <img src="/img/glove.png" alt="Gloves">
+            </div>
+            <div class="content">
+                <h5>Driving Gloves</h5>
+                <p>Comfortable leather gloves perfect for vintage driving.</p>
+                <span class="badge">for £2.99</span>
+                <a class="btn btn-primary disabled">Out of Stock</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 mb-4 g-3" data-category="mats">
+        <div class="cardr">
+            <div class="media">
+                <img src="/img/mat.png" alt="Mats">
+            </div>
+            <div class="content">
+                <h5>Floor Mats</h5>
+                <p>Custom WKK-branded mats to match your classic interior.</p>
+                <span class="badge">for £2.99</span>
+                <button type="button" class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 mb-4 g-3" data-category="wheelTrims">
+        <div class="cardr">
+            <div class="media">
+                <img src="/img/wheel.png" alt="Wheel Trims">
+            </div>
+            <div class="content">
+                <h5>Chrome Wheel Trim</h5>
+                <p>Classic chrome trim that fits most vintage wheels.</p>
+                <span class="badge">for £12.99</span>
+                <button type="button" class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 mb-4 g-3" data-category="Clothes">
+        <div class="cardr">
+            <div class="media">
+                <img src="/img/shirt.png" alt="T-Shirt">
+            </div>
+            <div class="content">
+                <h5>WKK T-Shirt</h5>
+                <p>Soft cotton shirt with a clean club print on the chest.</p>
+                <span class="badge">for £9.99</span>
+                <button type="button" class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 mb-4 g-3" data-category="clothes">
+        <div class="cardr">
+            <div class="media">
+                <img src="/img/hoodie.png" alt="Hoodie">
+            </div>
+            <div class="content">
+                <h5>Club Hoodie</h5>
+                <p>Warm hoodie with embroidered WKK emblem.</p>
+                <span class="badge">for £19.99</span>
+                <button type="button" class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 mb-4 g-3" data-category="badges">
+        <div class="cardr">
+            <div class="media">
+                <img src="/img/keychain2.png" alt="Keyring">
+            </div>
+            <div class="content">
+                <h5>Metal Keyring</h5>
+                <p>Small club keyring made from brushed metal.</p>
+                <span class="badge">for £3.49</span>
+                <button type="button" class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 mb-4 g-3" data-category="mats">
+        <div class="cardr">
+            <div class="media">
+                <img src="/img/bootmat.png" alt="Boot Mat">
+            </div>
+            <div class="content">
+                <h5>Boot Mat</h5>
+                <p>Heavy rubber boot mat with raised edges.</p>
+                <span class="badge">for £7.99</span>
+                <button type="button" class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 mb-4 g-3" data-category="Clothes">
+        <div class="cardr">
+            <div class="media">
+                <img src="/img/cap.png" alt="Cap">
+            </div>
+            <div class="content">
+                <h5>Cap</h5>
+                <p>A white cotton cap with “Wacky Kar Klub” embroidered on the front in red and green stitching.</p>
+                <span class="badge">for £7.99</span>
+                <button type="button" class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const buttons = document.querySelectorAll('#filter-buttons [data-filter]');
+          const cards = document.querySelectorAll('[data-category]');
+
+          buttons.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              const filter = btn.getAttribute('data-filter');
+
+              buttons.forEach(function (b) {
+                b.classList.remove('btn-primary');
+                b.classList.add('btn-outline-primary');
+              });
+
+              btn.classList.remove('btn-outline-primary');
+              btn.classList.add('btn-primary');
+
+              cards.forEach(function (card) {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                  card.style.display = '';
+                } else {
+                  card.style.display = 'none';
+                }
+              });
+            });
+          });
+        });
+    </script>
+}

@@ -1,0 +1,192 @@
+body {
+    padding-bottom: 200px;
+    background-color: #f6f4f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+h1, h2, h3, h4, h5 {
+    color: #800000;
+    font-weight: 700;
+}
+
+
+/* Footer */
+.footer {
+    position: fixed !important;
+    bottom: 0;
+    background: #ece8e2;
+    text-align: center;
+}
+
+.footer img:hover {
+    transition: transform .3s;
+    transform: scale(1.2);
+}
+/* end of footer */
+
+
+/* Navbar */
+.navbar-custom {
+    background-color: #ece8e2;
+}
+
+.navbar-custom .navbar-toggler {
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.navbar-custom .navbar-toggler:focus,
+.navbar-custom .navbar-toggler:hover,
+.navbar-custom .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+    border-color: #333333;
+}
+
+.navbar-custom .navbar-toggler-icon {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    transition: background-color 0.3s;
+}
+
+.navbar-custom .navbar-toggler-icon::before,
+.navbar-custom .navbar-toggler-icon::after,
+.navbar-custom .navbar-toggler-icon .line-middle {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: #800000;
+    border-radius: 0.1rem;
+    left: 0;
+    transition: background-color 0.3s;
+}
+
+.navbar-custom .navbar-toggler-icon::before {
+    top: calc(50% - 0.6rem);
+}
+
+.navbar-custom .navbar-toggler-icon::after {
+    top: calc(50% + 0.4rem);
+}
+
+.navbar-custom .navbar-toggler-icon .line-middle {
+    top: calc(50% - 0.05rem);
+}
+
+.navbar-custom .navbar-toggler:hover .navbar-toggler-icon::before,
+.navbar-custom .navbar-toggler:hover .navbar-toggler-icon::after,
+.navbar-custom .navbar-toggler:hover .navbar-toggler-icon .line-middle {
+    background-color: #a03a3a;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #333333;
+    transition: color 0.3s;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #a03a3a;
+    text-decoration: none;
+}
+/* End Navbar */
+
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #a03a3a;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #a03a3a;
+    border: none;
+    color: #fff;
+    width: auto;
+    margin: 0 auto;
+}
+
+.btn:hover:not(.disabled) {
+    background-color: #862828;
+}
+
+.btn.disabled {
+    background-color: #a03a3a;
+}
+
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+/* card tag*/
+.cardr {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 0.25rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.cardr:hover {
+    transform: scale(1.05);
+    background-color: #ffe2cc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cardr .media {
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cardr .media img {
+    max-height: 100%;
+    object-fit: contain;
+
+}
+
+.cardr .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+}
+
+.cardr .content .badge {
+    width: fit-content;
+    font-size: 14px;
+    font-weight: normal;
+}
+/* end card tag*/
+
+
+.badge {
+    background: #a03a3a;
+}
+
+
